@@ -1,0 +1,544 @@
+{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 PingFangSC-Regular;\f2\fnil\fcharset0 Menlo-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red159\green160\blue28;
+\red47\green180\blue29;\red64\green11\blue217;\red180\green36\blue25;\red200\green20\blue201;\red46\green174\blue187;
+\red38\green38\blue38;\red244\green244\blue244;\red0\green0\blue0;\red144\green1\blue18;\red0\green0\blue255;
+}
+{\*\expandedcolortbl;;\csgray\c0;\csgray\c100000;\cssrgb\c68468\c68012\c14208;
+\cssrgb\c20238\c73898\c14947;\cssrgb\c32308\c18668\c88227;\cssrgb\c76409\c21698\c12524;\cssrgb\c83396\c23075\c82664;\cssrgb\c20196\c73240\c78250;
+\cssrgb\c20000\c20000\c20000;\cssrgb\c96471\c96471\c96471;\cssrgb\c0\c0\c0;\cssrgb\c63922\c8235\c8235;\cssrgb\c0\c0\c100000;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 \CocoaLigature0 Last login: Wed Jul 18 20:08:28 on ttys003\
+chenbos-MacBook-Pro:~ chenbo$ pod repo\
+\
+\cf4 master\cf2 \
+- Type: git (master)\
+- URL:  https://github.com/CocoaPods/Specs.git\
+- Path: /Users/chenbo/.cocoapods/repos/master\
+\
+\cf5 1 repo\cf2 \
+chenbos-MacBook-Pro:~ chenbo$ pod repo --help\
+\ul Usage:\ulnone \
+\
+    $ \cf5 pod repo\cf2  \cf5 [COMMAND]\cf2 \
+\
+      Manage spec-repositories\
+\
+\ul Commands:\ulnone \
+\
+    \cf5 + add\cf2        Add a spec repo\
+    \cf5 + lint\cf2       Validates all specs in a repo\
+    \cf5 > list\cf2       List repos\
+    \cf5 + push\cf2       Push new specifications to a spec-repo\
+    \cf5 + remove\cf2     Remove a spec repo\
+    \cf5 + update\cf2     Update a spec repo\
+\
+\ul Options:\ulnone \
+\
+    \cf6 --silent\cf2     Show nothing\
+    \cf6 --verbose\cf2    Show more debugging information\
+    \cf6 --no-ansi\cf2    Show output without ANSI codes\
+    \cf6 --help\cf2       Show help banner of specified command\
+chenbos-MacBook-Pro:~ chenbo$ pod repo add BeiChenSpecs git@gitee.com:dawuyu/BeichenSpecs.git\
+Cloning spec repo `BeiChenSpecs` from `git@gitee.com:dawuyu/BeichenSpecs.git`\
+The authenticity of host 'gitee.com (120.55.226.24)' can't be established.\
+ECDSA key fingerprint is SHA256:FQGC9Kn/eye1W8icdBgrQp+KkGYoFgbVr17bmjey0Wc.\
+Are you sure you want to continue connecting (yes/no)? yes\
+\cf7 [!] /usr/bin/git clone git@gitee.com:dawuyu/BeichenSpecs.git BeiChenSpecs\cf2 \
+\
+\cf7 Cloning into 'BeiChenSpecs'...\cf2 \
+\cf7 Warning: Permanently added 'gitee.com,120.55.226.24' (ECDSA) to the list of known hosts.\cf2 \
+\cf7 git@gitee.com: Permission denied (publickey).\cf2 \
+\cf7 fatal: Could not read from remote repository.\cf2 \
+\
+\cf7 Please make sure you have the correct access rights\cf2 \
+\cf7 and the repository exists.\cf2 \
+\
+chenbos-MacBook-Pro:~ chenbo$ \
+\
+\
+ssh 
+\f1 \'c3\'dc\'d4\'bf\'c8\'cf\'d6\'a4\
+\
+
+\f0 Last login: Wed Jul 18 20:20:18 on ttys003\
+chenbos-MacBook-Pro:~ chenbo$ ssh-keygen\
+Generating public/private rsa key pair.\
+Enter file in which to save the key (/Users/chenbo/.ssh/id_rsa): \
+Enter passphrase (empty for no passphrase): \
+Enter same passphrase again: \
+Your identification has been saved in /Users/chenbo/.ssh/id_rsa.\
+Your public key has been saved in /Users/chenbo/.ssh/id_rsa.pub.\
+The key fingerprint is:\
+SHA256:6z8J3I7Fa7kgUaGDtz5h6UV9SylGE4r7Fx/0A8Elaeg chenbo@chenbos-MacBook-Pro.local\
+The key's randomart image is:\
++---[RSA 2048]----+\
+|        . ++oo.  |\
+|     . o =..++   |\
+|    . = +.+.*    |\
+|     . B .E= +   |\
+|      B.So. o o  |\
+|     + =o.+o . . |\
+|      = +=.+.    |\
+|       +.oB      |\
+|        .ooo     |\
++----[SHA256]-----+\
+chenbos-MacBook-Pro:~ chenbo$ \
+\
+chenbos-MacBook-Pro:~ chenbo$ pod repo add BeiChenSpecs git@gitee.com:dawuyu/BeichenSpecs.git\
+Cloning spec repo `BeiChenSpecs` from `git@gitee.com:dawuyu/BeichenSpecs.git`\
+chenbos-MacBook-Pro:~ chenbo$ \
+\
+Last login: Wed Jul 18 20:39:22 on ttys003\
+chenbos-MacBook-Pro:~ chenbo$ pod repo\
+\
+\cf4 BeiChenSpecs\cf2 \
+- Type: git (master)\
+- URL:  git@gitee.com:dawuyu/BeichenSpecs.git\
+- Path: /Users/chenbo/.cocoapods/repos/BeiChenSpecs\
+\
+\cf4 master\cf2 \
+- Type: git (master)\
+- URL:  https://github.com/CocoaPods/Specs.git\
+- Path: /Users/chenbo/.cocoapods/repos/master\
+\
+\cf5 2 repos\cf2 \
+chenbos-MacBook-Pro:~ chenbo$ \
+\
+\
+\
+Last login: Wed Jul 18 21:46:29 on ttys003\
+chenbos-MacBook-Pro:~ chenbo$ pod repo\
+\
+\cf4 BeiChenSpecs\cf2 \
+- Type: git (master)\
+- URL:  git@gitee.com:dawuyu/BeichenSpecs.git\
+- Path: /Users/chenbo/.cocoapods/repos/BeiChenSpecs\
+\
+\cf4 master\cf2 \
+- Type: git (master)\
+- URL:  https://github.com/CocoaPods/Specs.git\
+- Path: /Users/chenbo/.cocoapods/repos/master\
+\
+\cf5 2 repos\cf2 \
+chenbos-MacBook-Pro:~ chenbo$ cd /Users/chenbo/Documents/GITHUB/Modularization_OC_JS/
+\f1 \'c4\'a3\'bf\'e9\'bb\'af\'b1\'ca\'bc\'c7
+\f0 /Cocoapods
+\f1 \'d3\'a6\'d3\'c3
+\f0 /Cocoapods
+\f1 \'d4\'b6\'b3\'cc\'cb\'bd\'d3\'d0\'bf\'e2
+\f0 /
+\f1 \'bb\'f9\'d3\'da\'c2\'eb\'d4\'c6\'b5\'c4\'d4\'b6\'b3\'cc\'cb\'bd\'d3\'d0\'bf\'e2\'b7\'bd\'b0\'b8
+\f0 /remoteLib \
+chenbos-MacBook-Pro:remoteLib chenbo$ pod lib create DayumBussy\
+Cloning `https://github.com/CocoaPods/pod-template.git` into `DayumBussy`.\
+Configuring DayumBussy template.\
+\cf4 ! \cf2 Before you can create a new library we need to setup your git credentials.\
+\
+ What is your email?\
+\cf5  > \cf2 chenbo528369@163.com\
+\
+\cf5 ! \cf2 Setting your email in git to chenbo528369@163.com\
+  \cf8 git config user.email "chenbo528369@163.com"\cf2 \
+\
+------------------------------\
+\
+To get you started we need to ask a few questions, this should only take a minute.\
+\
+2018-07-18 22:03:56.962 defaults[78445:2928122] \
+The domain/default pair of (org.cocoapods.pod-template, HasRunbefore) does not exist\
+If this is your first time we recommend running through with the guide: \
+ - \cf6 \ul \ulc6 https://guides.cocoapods.org/making/using-pod-lib-create.html\cf2 \ulnone \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf8  ( hold cmd and double click links to open in a browser. )\cf2 \
+\
+ Press return to continue.\
+\
+\
+What platform do you want to use?? [ \ul iOS\ulnone  / macOS ]\
+\cf5  > \cf2 iOS\
+\
+What language do you want to use?? [ \ul Swift\ulnone  / ObjC ]\
+\cf5  > \cf2 ObjC\
+\
+Would you like to include a demo application with your library? [ \ul Yes\ulnone  / No ]\
+\cf5  > \cf2 Yes\
+\
+Which testing frameworks will you use? [ \ul Specta\ulnone  / Kiwi / None ]\
+\cf5  > \cf2 None\
+\
+Would you like to do view based testing? [ \ul Yes\ulnone  / No ]\
+\cf5  > \cf2 No\
+\
+What is your class prefix?\
+\cf5  > \cf2 Be\
+\
+Running \cf8 pod install\cf2  on your new library.\
+\
+Analyzing dependencies\
+Fetching podspec for `DayumBussy` from `../`\
+Downloading dependencies\
+\cf5 Installing DayumBussy (0.1.0)\cf2 \
+Generating Pods project\
+Integrating client project\
+\
+\cf5 [!] Please close any current Xcode sessions and use `DayumBussy.xcworkspace` for this project from now on.\cf2 \
+Sending stats\
+\cf5 Pod installation complete! There is 1 dependency from the Podfile and 1 total pod installed.\cf2 \
+\
+\cf4 [!] Automatically assigning platform `ios` with version `9.3` on target `DayumBussy_Example` because no platform was specified. Please specify a platform for this target in your Podfile. See `https://guides.cocoapods.org/syntax/podfile.html#platform`.\cf2 \
+\
+ Ace! you're ready to go!\
+ We will start you off by opening your project in Xcode\
+  \cf8 open 'DayumBussy/Example/DayumBussy.xcworkspace'\cf2 \
+\
+To learn more about the template see `https://github.com/CocoaPods/pod-template.git`.\
+To learn more about creating a new pod, see `http://guides.cocoapods.org/making/making-a-cocoapod`.\
+chenbos-MacBook-Pro:remoteLib chenbo$ \
+\
+\
+\
+\
+\
+\
+Last login: Wed Jul 18 22:01:59 on ttys003\
+chenbos-MacBook-Pro:~ chenbo$ cd /Users/chenbo/Documents/GITHUB/Modularization_OC_JS/
+\f1 \'c4\'a3\'bf\'e9\'bb\'af\'b1\'ca\'bc\'c7
+\f0 /Cocoapods
+\f1 \'d3\'a6\'d3\'c3
+\f0 /Cocoapods
+\f1 \'d4\'b6\'b3\'cc\'cb\'bd\'d3\'d0\'bf\'e2
+\f0 /
+\f1 \'bb\'f9\'d3\'da\'c2\'eb\'d4\'c6\'b5\'c4\'d4\'b6\'b3\'cc\'cb\'bd\'d3\'d0\'bf\'e2\'b7\'bd\'b0\'b8
+\f0 /remoteLib/DayumBussy/Example \
+chenbos-MacBook-Pro:Example chenbo$ pod install\
+Analyzing dependencies\
+Fetching podspec for `DayumBussy` from `../`\
+Downloading dependencies\
+Using DayumBussy (0.1.0)\
+Generating Pods project\
+Integrating client project\
+Sending stats\
+\cf5 Pod installation complete! There is 1 dependency from the Podfile and 1 total pod installed.\cf2 \
+\
+\cf4 [!] Automatically assigning platform `ios` with version `9.3` on target `DayumBussy_Example` because no platform was specified. Please specify a platform for this target in your Podfile. See `https://guides.cocoapods.org/syntax/podfile.html#platform`.\cf2 \
+chenbos-MacBook-Pro:Example chenbo$ cd /Users/chenbo/Documents/GITHUB/Modularization_OC_JS/
+\f1 \'c4\'a3\'bf\'e9\'bb\'af\'b1\'ca\'bc\'c7
+\f0 /Cocoapods
+\f1 \'d3\'a6\'d3\'c3
+\f0 /Cocoapods
+\f1 \'d4\'b6\'b3\'cc\'cb\'bd\'d3\'d0\'bf\'e2
+\f0 /
+\f1 \'bb\'f9\'d3\'da\'c2\'eb\'d4\'c6\'b5\'c4\'d4\'b6\'b3\'cc\'cb\'bd\'d3\'d0\'bf\'e2\'b7\'bd\'b0\'b8
+\f0 /remoteLib/DayumBussy \
+chenbos-MacBook-Pro:DayumBussy chenbo$ open .\
+chenbos-MacBook-Pro:DayumBussy chenbo$ pod lib lint\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf7  -> \cf2 DayumBussy (0.1.0)\
+    - WARN  | url: The URL (https://gitee.com/dawuyu/DayumBussy) is not reachable.\
+    - ERROR | [iOS] unknown: Encountered an unknown error (/usr/bin/xcrun simctl list -j devices\
+\
+xcrun: error: unable to find utility "simctl", not a developer tool or in PATH\
+) during validation.\
+\
+\cf7 [!] DayumBussy did not pass validation, due to 1 error and 1 warning.\cf2 \
+\cf7 You can use the `--no-clean` option to inspect any issue.\cf2 \
+chenbos-MacBook-Pro:DayumBussy chenbo$ pod spec lint\
+\
+Username for 'https://gitee.com': dawuyu\
+Password for 'https://dawuyu@gitee.com': \
+\cf7  -> \cf2 DayumBussy (0.1.0)\
+    - WARN  | url: The URL (https://gitee.com/dawuyu/DayumBussy) is not reachable.\
+    - ERROR | [iOS] unknown: Encountered an unknown error (\cf7 [!] /usr/bin/git clone https://gitee.com/dawuyu/DayumBussy.git /var/folders/sk/y7f5hkxx2cs0hzzxjdj0hx840000gn/T/d20180718-79216-19tn4gz --template= --single-branch --depth 1 --branch 0.1.0\cf2 \
+\
+\cf7 Cloning into '/var/folders/sk/y7f5hkxx2cs0hzzxjdj0hx840000gn/T/d20180718-79216-19tn4gz'...\cf2 \
+\cf7 fatal: Remote branch 0.1.0 not found in upstream origin\cf2 \
+) during validation.\
+\
+Analyzed 1 podspec.\
+\
+\cf7 [!] The spec did not pass validation, due to 1 error and 1 warning.\cf2 \
+chenbos-MacBook-Pro:DayumBussy chenbo$ git status\
+On branch master\
+Changes not staged for commit:\
+  (use "git add/rm <file>..." to update what will be committed)\
+  (use "git checkout -- <file>..." to discard changes in working directory)\
+\
+	\cf7 modified:   DayumBussy.podspec\cf2 \
+	\cf7 deleted:    DayumBussy/Classes/ReplaceMe.m\cf2 \
+	\cf7 modified:   Example/DayumBussy.xcodeproj/project.pbxproj\cf2 \
+\
+Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\
+\
+	\cf7 DayumBussy/Classes/Category/\cf2 \
+	\cf7 Example/DayumBussy.xcworkspace/\cf2 \
+	\cf7 Example/Podfile.lock\cf2 \
+	\cf7 Example/Pods/\cf2 \
+\
+no changes added to commit (use "git add" and/or "git commit -a")\
+chenbos-MacBook-Pro:DayumBussy chenbo$ git add .\
+chenbos-MacBook-Pro:DayumBussy chenbo$ git commit -m'xxxxx'\
+[master a85fa1d] xxxxx\
+ Committer: 
+\f1 \'b3\'c2\'b2\'a9
+\f0  <chenbo@chenbos-MacBook-Pro.local>\
+Your name and email address were configured automatically based\
+on your username and hostname. Please check that they are accurate.\
+You can suppress this message by setting them explicitly:\
+\
+    git config --global user.name "Your Name"\
+    git config --global user.email you@example.com\
+\
+After doing this, you may fix the identity used for this commit with:\
+\
+    git commit --amend --reset-author\
+\
+ 41 files changed, 1925 insertions(+), 7 deletions(-)\
+ create mode 100755 DayumBussy/Classes/Category/CALayer+PauseAimate.h\
+ create mode 100755 DayumBussy/Classes/Category/CALayer+PauseAimate.m\
+ create mode 100644 DayumBussy/Classes/Category/UIImage+XMGImage.h\
+ create mode 100644 DayumBussy/Classes/Category/UIImage+XMGImage.m\
+ create mode 100644 DayumBussy/Classes/Category/UIView+XMGLayout.h\
+ create mode 100644 DayumBussy/Classes/Category/UIView+XMGLayout.m\
+ delete mode 100644 DayumBussy/Classes/ReplaceMe.m\
+ create mode 100644 Example/DayumBussy.xcworkspace/contents.xcworkspacedata\
+ create mode 100644 Example/DayumBussy.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist\
+ create mode 100644 Example/Podfile.lock\
+ create mode 100644 Example/Pods/Local Podspecs/DayumBussy.podspec.json\
+ create mode 100644 Example/Pods/Manifest.lock\
+ create mode 100644 Example/Pods/Pods.xcodeproj/project.pbxproj\
+ create mode 100644 Example/Pods/Target Support Files/DayumBussy/DayumBussy-dummy.m\
+ create mode 100644 Example/Pods/Target Support Files/DayumBussy/DayumBussy-prefix.pch\
+ create mode 100644 Example/Pods/Target Support Files/DayumBussy/DayumBussy-umbrella.h\
+ create mode 100644 Example/Pods/Target Support Files/DayumBussy/DayumBussy.modulemap\
+ create mode 100644 Example/Pods/Target Support Files/DayumBussy/DayumBussy.xcconfig\
+ create mode 100644 Example/Pods/Target Support Files/DayumBussy/Info.plist\
+ create mode 100644 Example/Pods/Target Support Files/Pods-DayumBussy_Example/Info.plist\
+ create mode 100644 Example/Pods/Target Support Files/Pods-DayumBussy_Example/Pods-DayumBussy_Example-acknowledgements.markdown\
+ create mode 100644 Example/Pods/Target Support Files/Pods-DayumBussy_Example/Pods-DayumBussy_Example-acknowledgements.plist\
+ create mode 100644 Example/Pods/Target Support Files/Pods-DayumBussy_Example/Pods-DayumBussy_Example-dummy.m\
+ create mode 100755 Example/Pods/Target Support Files/Pods-DayumBussy_Example/Pods-DayumBussy_Example-frameworks.sh\
+ create mode 100755 Example/Pods/Target Support Files/Pods-DayumBussy_Example/Pods-DayumBussy_Example-resources.sh\
+ create mode 100644 Example/Pods/Target Support Files/Pods-DayumBussy_Example/Pods-DayumBussy_Example-umbrella.h\
+ create mode 100644 Example/Pods/Target Support Files/Pods-DayumBussy_Example/Pods-DayumBussy_Example.debug.xcconfig\
+ create mode 100644 Example/Pods/Target Support Files/Pods-DayumBussy_Example/Pods-DayumBussy_Example.modulemap\
+ create mode 100644 Example/Pods/Target Support Files/Pods-DayumBussy_Example/Pods-DayumBussy_Example.release.xcconfig\
+ create mode 100644 Example/Pods/Target Support Files/Pods-DayumBussy_Tests/Info.plist\
+ create mode 100644 Example/Pods/Target Support Files/Pods-DayumBussy_Tests/Pods-DayumBussy_Tests-acknowledgements.markdown\
+ create mode 100644 Example/Pods/Target Support Files/Pods-DayumBussy_Tests/Pods-DayumBussy_Tests-acknowledgements.plist\
+ create mode 100644 Example/Pods/Target Support Files/Pods-DayumBussy_Tests/Pods-DayumBussy_Tests-dummy.m\
+ create mode 100755 Example/Pods/Target Support Files/Pods-DayumBussy_Tests/Pods-DayumBussy_Tests-frameworks.sh\
+ create mode 100755 Example/Pods/Target Support Files/Pods-DayumBussy_Tests/Pods-DayumBussy_Tests-resources.sh\
+ create mode 100644 Example/Pods/Target Support Files/Pods-DayumBussy_Tests/Pods-DayumBussy_Tests-umbrella.h\
+ create mode 100644 Example/Pods/Target Support Files/Pods-DayumBussy_Tests/Pods-DayumBussy_Tests.debug.xcconfig\
+ create mode 100644 Example/Pods/Target Support Files/Pods-DayumBussy_Tests/Pods-DayumBussy_Tests.modulemap\
+ create mode 100644 Example/Pods/Target Support Files/Pods-DayumBussy_Tests/Pods-DayumBussy_Tests.release.xcconfig\
+chenbos-MacBook-Pro:DayumBussy chenbo$ git log\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf4 commit a85fa1d40c2830559af2812cebf545264059ceff (
+\f2\b \cf9 HEAD -> \cf5 master
+\f0\b0 \cf4 )\cf2 \
+Author: 
+\f1 \'b3\'c2\'b2\'a9
+\f0  <chenbo@chenbos-MacBook-Pro.local>\
+Date:   Wed Jul 18 22:28:52 2018 +0800\
+\
+    xxxxx\
+\
+\cf4 commit 029a307dc00506a841f0f926564aeec1b88994ab\cf2 \
+Author: 
+\f1 \'b3\'c2\'b2\'a9
+\f0  <chenbo@chenbos-MacBook-Pro.local>\
+Date:   Wed Jul 18 22:05:15 2018 +0800\
+\
+    Initial commit\
+chenbos-MacBook-Pro:DayumBussy chenbo$ git remote\
+chenbos-MacBook-Pro:DayumBussy chenbo$ git remote add https://gitee.com/dawuyu/DayumBussy.git\
+usage: git remote add [<options>] <name> <url>\
+\
+    -f, --fetch           fetch the remote branches\
+    --tags                import all tags and associated objects when fetching\
+                          or do not fetch any tag at all (--no-tags)\
+    -t, --track <branch>  branch(es) to track\
+    -m, --master <branch>\
+                          master branch\
+    --mirror[=<push|fetch>]\
+                          set up remote as a mirror to push to or fetch from\
+\
+chenbos-MacBook-Pro:DayumBussy chenbo$ git remote\
+chenbos-MacBook-Pro:DayumBussy chenbo$ git remote add origin https://gitee.com/dawuyu/DayumBussy.git\
+chenbos-MacBook-Pro:DayumBussy chenbo$ git remote\
+origin\
+chenbos-MacBook-Pro:DayumBussy chenbo$ git push origin master\
+Counting objects: 92, done.\
+Delta compression using up to 4 threads.\
+Compressing objects: 100% (83/83), done.\
+Writing objects: 100% (92/92), 32.04 KiB | 2.13 MiB/s, done.\
+Total 92 (delta 20), reused 0 (delta 0)\
+remote: Powered by Gitee.com\
+To https://gitee.com/dawuyu/DayumBussy.git\
+ * [new branch]      master -> master\
+chenbos-MacBook-Pro:DayumBussy chenbo$ git tag\
+chenbos-MacBook-Pro:DayumBussy chenbo$ git tag '0.1.0'\
+chenbos-MacBook-Pro:DayumBussy chenbo$ git tag\
+0.1.0\
+chenbos-MacBook-Pro:DayumBussy chenbo$ git push --tags\
+Total 0 (delta 0), reused 0 (delta 0)\
+remote: Powered by Gitee.com\
+To https://gitee.com/dawuyu/DayumBussy.git\
+ * [new tag]         0.1.0 -> 0.1.0\
+chenbos-MacBook-Pro:DayumBussy chenbo$ pod lib lint\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf7  -> \cf2 DayumBussy (0.1.0)\
+    - WARN  | url: The URL (https://gitee.com/dawuyu/DayumBussy) is not reachable.\
+    - ERROR | [iOS] unknown: Encountered an unknown error (/usr/bin/xcrun simctl list -j devices\
+\
+xcrun: error: unable to find utility "simctl", not a developer tool or in PATH\
+) during validation.\
+\
+\cf7 [!] DayumBussy did not pass validation, due to 1 error and 1 warning.\cf2 \
+\cf7 You can use the `--no-clean` option to inspect any issue.\cf2 \
+chenbos-MacBook-Pro:DayumBussy chenbo$ pod spec lint\
+\
+\cf7  -> \cf2 DayumBussy (0.1.0)\
+    - WARN  | url: The URL (https://gitee.com/dawuyu/DayumBussy) is not reachable.\
+    - ERROR | [iOS] unknown: Encountered an unknown error (/usr/bin/xcrun simctl list -j devices\
+\
+xcrun: error: unable to find utility "simctl", not a developer tool or in PATH\
+) during validation.\
+\
+Analyzed 1 podspec.\
+\
+\cf7 [!] The spec did not pass validation, due to 1 error and 1 warning.\cf2 \
+chenbos-MacBook-Pro:DayumBussy chenbo$ pod repo\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf4 BeiChenSpecs\cf2 \
+- Type: git (master)\
+- URL:  git@gitee.com:dawuyu/BeichenSpecs.git\
+- Path: /Users/chenbo/.cocoapods/repos/BeiChenSpecs\
+\
+\cf4 master\cf2 \
+- Type: git (master)\
+- URL:  https://github.com/CocoaPods/Specs.git\
+- Path: /Users/chenbo/.cocoapods/repos/master\
+\
+\cf5 2 repos\cf2 \
+chenbos-MacBook-Pro:DayumBussy chenbo$ pod repo push DayumBussy DayumBussy.podspec\
+Cloning spec repo `dayumbussy` from `DayumBussy`\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf7 [!] Unable to find the `DayumBussy` repo. If it has not yet been cloned, add it via `pod repo add`.\cf2 \
+chenbos-MacBook-Pro:DayumBussy chenbo$ push BeiChenSpecs DayumBussy.podspec\
+-bash: push: command not found\
+chenbos-MacBook-Pro:DayumBussy chenbo$ pod push BeiChenSpecs DayumBussy.podspec\
+\cf7 [!] Unknown command: `push`\cf2 \
+\cf7 Did you mean: \cf5 list\cf7 ?\cf2 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\ul Usage:\ulnone \
+\
+    $ \cf5 pod\cf2  \cf5 COMMAND\cf2 \
+\
+      CocoaPods, the Cocoa library package manager.\
+\
+\ul Commands:\ulnone \
+\
+    \cf5 + cache\cf2          Manipulate the CocoaPods cache\
+    \cf5 + deintegrate\cf2    Deintegrate CocoaPods from your project\
+    \cf5 + env\cf2            Display pod environment\
+    \cf5 + init\cf2           Generate a Podfile for the current directory\
+    \cf5 + install\cf2        Install project dependencies according to versions from a\
+                    Podfile.lock\
+    \cf5 + ipc\cf2            Inter-process communication\
+    \cf5 + lib\cf2            Develop pods\
+    \cf5 + list\cf2           List pods\
+    \cf5 + outdated\cf2       Show outdated project dependencies\
+    \cf5 + plugins\cf2        Show available CocoaPods plugins\
+    \cf5 + repo\cf2           Manage spec-repositories\
+    \cf5 + search\cf2         Search for pods\
+    \cf5 + setup\cf2          Setup the CocoaPods environment\
+    \cf5 + spec\cf2           Manage pod specs\
+    \cf5 + trunk\cf2          Interact with the CocoaPods API (e.g. publishing new specs)\
+    \cf5 + try\cf2            Try a Pod!\
+    \cf5 + update\cf2         Update outdated project dependencies and create new\
+                    Podfile.lock\
+\
+\ul Options:\ulnone \
+\
+    \cf6 --silent\cf2         Show nothing\
+    \cf6 --version\cf2        Show the version of the tool\
+    \cf6 --verbose\cf2        Show more debugging information\
+    \cf6 --no-ansi\cf2        Show output without ANSI codes\
+    \cf6 --help\cf2           Show help banner of specified command\
+chenbos-MacBook-Pro:DayumBussy chenbo$ pod repo push BeiChenSpecs DayumBussy.podspec\
+\
+\cf4 Validating spec\cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf7  -> \cf2 DayumBussy (0.1.0)\
+    - WARN  | url: The URL (https://gitee.com/dawuyu/DayumBussy) is not reachable.\
+    - ERROR | [iOS] unknown: Encountered an unknown error (/usr/bin/xcrun simctl list -j devices\
+\
+xcrun: error: unable to find utility "simctl", not a developer tool or in PATH\
+) during validation.\
+\
+\cf7 [!] The `DayumBussy.podspec` specification does not validate.\cf2 \
+chenbos-MacBook-Pro:DayumBussy chenbo$ pod lib lint\
+\
+\cf7  -> \cf2 DayumBussy (0.1.0)\
+    - ERROR | [iOS] unknown: Encountered an unknown error (/usr/bin/xcrun simctl list -j devices\
+\
+xcrun: error: unable to find utility "simctl", not a developer tool or in PATH\
+) during validation.\
+\
+\cf7 [!] DayumBussy did not pass validation, due to 1 error.\cf2 \
+\cf7 You can use the `--no-clean` option to inspect any issue.\cf2 \
+chenbos-MacBook-Pro:DayumBussy chenbo$ \
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 - ERROR | [iOS] unknown: Encountered an unknown error (/usr/bin/xcrun simctl list -j devices\
+\
+xcrun: error: unable to find utility \cf13 "simctl"\cf10 , \cf14 not\cf10  a developer tool \cf14 or\cf10  \cf14 in\cf10  PATH\
+) during validation.\
+\
+[!] The spec did \cf14 not\cf10  \cf14 pass\cf10  validation, due to 1 error.
+\fs22 \cf2 \cb3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+\
+chenbos-MacBook-Pro:DayumBussy chenbo$ sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer \
+Password:\
+chenbos-MacBook-Pro:DayumBussy chenbo$ pod lib lint\
+\
+\cf5  -> \cf2 DayumBussy (0.1.0)\
+\
+\cf5 DayumBussy passed validation.\cf2 \
+chenbos-MacBook-Pro:DayumBussy chenbo$ pod repo push BeiChenSpecs DayumBussy.podspec\
+\
+\cf4 Validating spec\cf2 \
+\cf5  -> \cf2 DayumBussy (0.1.0)\
+\
+\cf4 Updating the `BeiChenSpecs' repo\cf2 \
+\
+Already up to date.\
+\
+\cf4 Adding the spec to the `BeiChenSpecs' repo\cf2 \
+\
+ - [Add] DayumBussy (0.1.0)\
+\
+\cf4 Pushing the `BeiChenSpecs' repo\cf2 \
+\
+chenbos-MacBook-Pro:DayumBussy chenbo$ \
+\
+\
+\
+}

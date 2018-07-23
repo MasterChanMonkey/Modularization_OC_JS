@@ -1,0 +1,109 @@
+{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 PingFangSC-Regular;\f2\fnil\fcharset0 Menlo-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red159\green160\blue28;
+\red47\green180\blue29;\red46\green174\blue187;}
+{\*\expandedcolortbl;;\csgray\c0;\csgray\c100000;\cssrgb\c68468\c68012\c14208;
+\cssrgb\c20238\c73898\c14947;\cssrgb\c20196\c73240\c78250;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 \CocoaLigature0 Last login: Tue Jul 17 20:00:27 on ttys000\
+chenbos-MacBook-Pro:~ chenbo$ pod repo\
+\
+\cf4 master\cf2 \
+- Type: git (master)\
+- URL:  https://github.com/CocoaPods/Specs.git\
+- Path: /Users/chenbo/.cocoapods/repos/master\
+\
+\cf5 1 repo\cf2 \
+chenbos-MacBook-Pro:~ chenbo$ cd /Users/chenbo/Documents/GITHUB/Modularization_OC_JS/
+\f1 \'c4\'a3\'bf\'e9\'bb\'af\'b1\'ca\'bc\'c7
+\f0 /Cocoapods
+\f1 \'d3\'a6\'d3\'c3
+\f0 /Cocoapods
+\f1 \'b1\'be\'b5\'d8\'cb\'bd\'d3\'d0\'bf\'e2
+\f0 /localLib/testPerson/Classes \
+chenbos-MacBook-Pro:Classes chenbo$ touch Person.h Person.m\
+chenbos-MacBook-Pro:Classes chenbo$ cd /Users/chenbo/Documents/GITHUB/Modularization_OC_JS/
+\f1 \'c4\'a3\'bf\'e9\'bb\'af\'b1\'ca\'bc\'c7
+\f0 /Cocoapods
+\f1 \'d3\'a6\'d3\'c3
+\f0 /Cocoapods
+\f1 \'b1\'be\'b5\'d8\'cb\'bd\'d3\'d0\'bf\'e2
+\f0 /localLib/testPerson \
+chenbos-MacBook-Pro:testPerson chenbo$ git init\
+Initialized empty Git repository in /Users/chenbo/Documents/GITHUB/Modularization_OC_JS/
+\f1 \'c4\'a3\'bf\'e9\'bb\'af\'b1\'ca\'bc\'c7
+\f0 /Cocoapods
+\f1 \'d3\'a6\'d3\'c3
+\f0 /Cocoapods
+\f1 \'b1\'be\'b5\'d8\'cb\'bd\'d3\'d0\'bf\'e2
+\f0 /localLib/testPerson/.git/\
+chenbos-MacBook-Pro:testPerson chenbo$ git add .\
+chenbos-MacBook-Pro:testPerson chenbo$ git status\
+On branch master\
+\
+No commits yet\
+\
+Changes to be committed:\
+  (use "git rm --cached <file>..." to unstage)\
+\
+	\cf5 new file:   Classes/Person.h\cf2 \
+	\cf5 new file:   Classes/Person.m\cf2 \
+\
+chenbos-MacBook-Pro:testPerson chenbo$ git commit -m'xxxxxxx'\
+[master (root-commit) c75c0ff] xxxxxxx\
+ Committer: 
+\f1 \'b3\'c2\'b2\'a9
+\f0  <chenbo@chenbos-MacBook-Pro.local>\
+Your name and email address were configured automatically based\
+on your username and hostname. Please check that they are accurate.\
+You can suppress this message by setting them explicitly:\
+\
+    git config --global user.name "Your Name"\
+    git config --global user.email you@example.com\
+\
+After doing this, you may fix the identity used for this commit with:\
+\
+    git commit --amend --reset-author\
+\
+ 2 files changed, 0 insertions(+), 0 deletions(-)\
+ create mode 100644 Classes/Person.h\
+ create mode 100644 Classes/Person.m\
+chenbos-MacBook-Pro:testPerson chenbo$ git log\
+\cf4 commit c75c0ffd69c44f7e5c96ff1fcc46ca97e869b01d (
+\f2\b \cf6 HEAD -> \cf5 master
+\f0\b0 \cf4 )\cf2 \
+Author: 
+\f1 \'b3\'c2\'b2\'a9
+\f0  <chenbo@chenbos-MacBook-Pro.local>\
+Date:   Tue Jul 17 20:12:08 2018 +0800\
+\
+    xxxxxxx\
+chenbos-MacBook-Pro:testPerson chenbo$ pod spec create testPerson\
+\
+\cf5 Specification created at testPerson.podspec\cf2 \
+chenbos-MacBook-Pro:testPerson chenbo$ cd /Users/chenbo/Documents/GITHUB/Modularization_OC_JS/
+\f1 \'c4\'a3\'bf\'e9\'bb\'af\'b1\'ca\'bc\'c7
+\f0 /Cocoapods
+\f1 \'d3\'a6\'d3\'c3
+\f0 /Cocoapods
+\f1 \'b1\'be\'b5\'d8\'cb\'bd\'d3\'d0\'bf\'e2
+\f0 /localLib/test \
+chenbos-MacBook-Pro:test chenbo$ pod init\
+chenbos-MacBook-Pro:test chenbo$ pod install\
+Analyzing dependencies\
+Fetching podspec for `testPerson` from `../testPerson`\
+Downloading dependencies\
+\cf5 Installing testPerson (0.0.1)\cf2 \
+Generating Pods project\
+Integrating client project\
+\
+\cf5 [!] Please close any current Xcode sessions and use `test.xcworkspace` for this project from now on.\cf2 \
+Sending stats\
+\cf5 Pod installation complete! There is 1 dependency from the Podfile and 1 total pod installed.\cf2 \
+\
+\cf4 [!] Automatically assigning platform `ios` with version `11.4` on target `test` because no platform was specified. Please specify a platform for this target in your Podfile. See `https://guides.cocoapods.org/syntax/podfile.html#platform`.\cf2 \
+chenbos-MacBook-Pro:test chenbo$ \
+}

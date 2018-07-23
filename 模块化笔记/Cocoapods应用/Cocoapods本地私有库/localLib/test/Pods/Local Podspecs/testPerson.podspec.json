@@ -1,0 +1,25 @@
+{
+  "name": "testPerson",
+  "version": "0.0.1",
+  "summary": "testPerson.",
+  "description": "hkhkjhhjkgdsjfgkasgfjgajkdfkasdgfdsakfgkastestPerson",
+  "homepage": "http://EXAMPLE/testPerson",
+  "license": "MIT",
+  "authors": {
+    "": ""
+  },
+  "source": {
+    "git": "",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "Classes",
+    "Classes/**/*.{h,m}"
+  ],
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  }
+}
